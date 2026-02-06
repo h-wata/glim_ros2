@@ -79,6 +79,14 @@ target_link_libraries(validator_node
   glim_ros
 )
 
+### glim_export_ply ###
+ament_auto_add_executable(glim_export_ply
+  src/export_ply.cpp
+)
+target_link_libraries(glim_export_ply
+  glim::glim
+)
+
 if(BUILD_WITH_VIEWER)
   ### offline_viewer ###
   ament_auto_add_executable(offline_viewer
